@@ -2,11 +2,8 @@ package ru.rencredit.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 import ru.rencredit.pages.widgets.SelectWidget;
 
-import java.util.List;
-import java.util.Optional;
 
 public class RegisterCardPage extends BasePageObject{
     @FindBy(css= "input[id=t1]")

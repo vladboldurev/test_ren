@@ -2,7 +2,6 @@ package ru.rencredit.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.HashMap;
@@ -17,9 +16,6 @@ public class DepositsPage extends BasePageObject{
 
     @FindBy(xpath= "//label[contains(text(),'Сумма вклада')]/following::input[@name='amount']")
     private WebElement depositAmountInput;
-
-//    @FindBy(xpath= "//div[@data-property='period']//div[@class='ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min']")
-//    private WebElement periodSlider;
 
     @FindBy(xpath= "//div[@data-property='period']//div[@class='range-scale range-scale_item_6']")
     private WebElement periodSlider;

@@ -5,6 +5,8 @@ import ru.rencredit.pages.DepositsPage;
 import ru.rencredit.pages.MainPage;
 import io.qameta.allure.Step;
 
+import static io.qameta.allure.Allure.parameter;
+
 public class CalculateDepositSteps {
 
     private MainPage mainPage;
@@ -26,7 +28,7 @@ public class CalculateDepositSteps {
 
     @Step("calculate deposit")
     public void calculateIncomeFromDeposit(String amount, String termDeposit ) {
-//        depositsPage.scrollToCalculateDeposits();
+        parameter("Deposit params: ",amount + " " + termDeposit);
         depositsPage.clickCalculateInBankCheckbox();
         depositsPage.setValueInCalculateDepositAmount(amount);
         depositsPage.setTermForDeposit(termDeposit);

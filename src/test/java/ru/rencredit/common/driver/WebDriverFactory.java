@@ -41,35 +41,5 @@ public enum WebDriverFactory {
     public abstract WebDriver getWebDriver();
 
     public abstract MutableCapabilities getOptions();
-
 }
-//
-//
-//class WebDrivedrFactory{
-//
-//    public static WebDriver getBrowser(MyBrowserType myBrowserType, int timeoutSeconds){
-//        WebDriver driver = null;
-//        try {
-//            switch (myBrowserType) {
-//                case FIREFOX:
-//                    driver = ThreadGuard.protect(new FirefoxDriver());
-//                    return driver;
-//                case CHROME:
-//                    System.setProperty("webdriver.chrome.driver", CHROME_EXE_FILE);
-//                    driver = ThreadGuard.protect(new ChromeDriver());
-//                    return driver;
-//                default:
-//                    logger.error("Cant find setup for browser : " + myBrowserType.getBrowser());
-//            }
-//
-//            driver.manage().timeouts().implicitlyWait(timeoutSeconds, TimeUnit.SECONDS);
-//        }catch (Exception e){
-//            e.printStackTrace();
-//            logger.error("Can't create browser ....! "+e.getMessage());
-//            BaseCommunityPage.failTest(e, "Can not create browser :"+ myBrowserType.getBrowser());
-//        }
-//
-//        return driver;
-//    }
-//
-//}
+

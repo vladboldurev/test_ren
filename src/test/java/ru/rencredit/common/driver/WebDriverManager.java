@@ -7,7 +7,6 @@ public class WebDriverManager {
     private static String browserType = "CHROME";
 
     private static void createDriver(){
-        System.out.println("createDriver2");
         createDriver(WebDriverManager.browserType);
     }
 
@@ -22,20 +21,16 @@ public class WebDriverManager {
 
     public static WebDriver getDriver() {
         if(WebDriverManager.threadLocalDriverEmpty()) {
-            System.out.println("createDriver1");
             WebDriverManager.createDriver();
         }
-        System.out.println("Driver exist 3");
         return threadLocalDriver.get();
     }
 
     private static boolean threadLocalDriverEmpty() {
-        System.out.println("threadLocalDriverEmpty");
         return threadLocalDriver.get() == null;
     }
 
     private static void setWebDriver(WebDriver driver) {
-        System.out.println("set WebDriver");
         threadLocalDriver.set(driver);
     }
 
@@ -44,9 +39,7 @@ public class WebDriverManager {
     }
 
     public static void destroyLocalDriver(){
-        System.out.println("destroyLocalDriver1");
         if(!WebDriverManager.threadLocalDriverEmpty()) {
-            System.out.println("destroyLocalDriver2");
             threadLocalDriver.get().quit();
         }
         WebDriverManager.unset();

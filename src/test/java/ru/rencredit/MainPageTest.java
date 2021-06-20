@@ -1,7 +1,6 @@
 package ru.rencredit;
 
 import org.testng.annotations.*;
-import ru.rencredit.common.driver.DriverManagerFactoryOld;
 import ru.rencredit.common.driver.WebDriverManager;
 import ru.rencredit.dataprovider.CardDataProviderClass;
 import ru.rencredit.dataprovider.DepositDataProvider;
